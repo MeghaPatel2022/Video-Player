@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000"
+        tools:context=".activies.AllVideoPlayer">
+
+        <RelativeLayout
+            android:id="@+id/rlMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <tcking.github.com.giraffeplayer2.VideoView
+                android:id="@+id/video_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:id="@+id/rlTop"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/imgBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingVertical="@dimen/_13sdp"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:src="@drawable/back" />
+
+                <TextView
+                    android:id="@+id/tvVidName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_toLeftOf="@+id/imgSS"
+                    android:layout_toRightOf="@+id/imgBack"
+                    android:fontFamily="@font/ibmplexserif_medium"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="VID 20232_12566"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp" />
+
+                <ImageView
+                    android:id="@+id/imgSS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_toLeftOf="@+id/imgFloatScreen"
+                    android:src="@drawable/ic_ss" />
+
+                <ImageView
+                    android:id="@+id/imgFloatScreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:src="@drawable/ic_toggle_screen"
+                    android:visibility="visible" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlIcons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlTop"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_7sdp">
+
+                <ImageView
+                    android:id="@+id/imgOrientation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_orientation" />
+
+                <ImageView
+                    android:id="@+id/imgEqualizer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:layout_toRightOf="@+id/imgOrientation"
+                    android:src="@drawable/ic_equalizer" />
+
+                <ImageView
+                    android:id="@+id/imgMute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:layout_toRightOf="@+id/imgEqualizer"
+                    android:src="@drawable/mute_unmute_video" />
+
+                <ImageView
+                    android:id="@+id/imgSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:layout_toRightOf="@+id/imgMute"
+                    android:src="@drawable/ic_speed"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imgBackground"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:layout_toRightOf="@+id/imgSpeed"
+                    android:src="@drawable/ic_background" />
+
+                <ImageView
+                    android:id="@+id/imgRepeat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:layout_toRightOf="@+id/imgBackground"
+                    android:src="@drawable/ic_repeat" />
+
+                <ImageView
+                    android:id="@+id/imgShuffle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:layout_toRightOf="@+id/imgRepeat"
+                    android:src="@drawable/ic_shuffle" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/llMorePopup"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_300sdp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/gradient1"
+            android:visibility="gone"
+            app:elevation="@dimen/_7sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rlTop1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/ibmplexserif_regular"
+                        android:text="@string/equalizer"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <TextView
+                        android:id="@+id/tvOnOff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_toLeftOf="@+id/equalizerOn"
+                        android:fontFamily="@font/ibmplexserif_regular"
+                        android:text="ON"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/equalizerOn"
+                        style="@style/SCBSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:checked="true"
+                        app:drawableTint="@color/purple_500"
+                        app:thumbTint="@color/purple_500"
+                        app:trackTint="#8C6C5ECF" />
+
+                </RelativeLayout>
+
+                <ScrollView
+                    android:id="@+id/scrollable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlTop1">
+
+                    <LinearLayout
+                        android:id="@+id/llMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlTop1"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tab_layout1"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            android:background="@android:color/transparent"
+                            android:clipToPadding="false"
+                            android:overScrollMode="never"
+                            app:tabBackground="@drawable/select_unselect_preset"
+                            app:tabGravity="fill"
+                            app:tabIndicator="@null"
+                            app:tabIndicatorHeight="0dp"
+                            app:tabMode="scrollable"
+                            app:tabPaddingEnd="10dp"
+                            app:tabPaddingStart="10dp"
+                            app:tabSelectedTextColor="@color/white"
+                            app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+                            app:tabTextColor="@color/white" />
+
+                        <LinearLayout
+                            android:id="@+id/equalizerContainer1"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_170sdp"
+                            android:layout_weight="5"
+                            android:orientation="horizontal"
+                            android:padding="3dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvDb1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="2db"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_10sdp" />
+
+                                <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="15">
+
+                                    <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                                        android:id="@+id/seekBar1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginTop="@dimen/_7sdp"
+                                        android:padding="10dp"
+                                        android:progressBackgroundTint="@color/white"
+                                        android:progressTint="@color/purple_500"
+                                        android:thumb="@drawable/seek_thumb"
+                                        app:seekBarRotation="CW270" />
+
+                                </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+                                <TextView
+                                    android:id="@+id/mHz1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="2db"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_10sdp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvDb2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="2db"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_10sdp" />
+
+
+                                <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="15">
+
+                                    <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                                        android:id="@+id/seekBar2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginTop="@dimen/_7sdp"
+                                        android:padding="10dp"
+                                        android:progressBackgroundTint="@color/white"
+                                        android:progressTint="@color/purple_500"
+                                        android:thumb="@drawable/seek_thumb"
+                                        app:seekBarRotation="CW270" />
+
+                                </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+                                <TextView
+                                    android:id="@+id/mHz2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="2db"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_10sdp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvDb3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="2db"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_10sdp" />
+
+
+                                <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="15">
+
+                                    <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                                        android:id="@+id/seekBar3"
+                                        android:layout_width="0dp"
+                                        android:layout_height="267dp"
+                                        android:layout_marginTop="@dimen/_7sdp"
+                                        android:padding="10dp"
+                                        android:progressBackgroundTint="@color/white"
+                                        android:progressTint="@color/purple_500"
+                                        android:thumb="@drawable/seek_thumb"
+                                        app:seekBarRotation="CW270" />
+
+                                </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+                                <TextView
+                                    android:id="@+id/mHz3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="2db"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_10sdp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvDb4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="2db"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_10sdp" />
+
+                                <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="15">
+
+                                    <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                                        android:id="@+id/seekBar4"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginTop="@dimen/_7sdp"
+                                        android:padding="10dp"
+                                        android:progressBackgroundTint="@color/white"
+                                        android:progressTint="@color/purple_500"
+                                        android:thumb="@drawable/seek_thumb"
+                                        app:seekBarRotation="CW270" />
+
+                                </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+                                <TextView
+                                    android:id="@+id/mHz4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="2db"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_10sdp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvDb5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="2db"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_10sdp" />
+
+                                <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="15">
+
+                                    <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                                        android:id="@+id/seekBar5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginTop="@dimen/_7sdp"
+                                        android:padding="10dp"
+                                        android:progressBackgroundTint="@color/white"
+                                        android:progressTint="@color/purple_500"
+                                        android:thumb="@drawable/seek_thumb"
+                                        app:seekBarRotation="CW270" />
+
+                                </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+                                <TextView
+                                    android:id="@+id/mHz5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="2db"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_10sdp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            android:paddingHorizontal="@dimen/_15sdp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="@font/ibmplexserif_regular"
+                                android:text="Reverb"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15sdp" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginVertical="@dimen/_5sdp">
+
+                                <Spinner
+                                    android:id="@+id/spinner"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="@dimen/_15sdp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:layout_toRightOf="@id/spinner"
+                                    android:contentDescription="@null"
+                                    android:src="@drawable/ic_dropdown" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_15sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginHorizontal="@dimen/_7sdp"
+                                android:fontFamily="@font/ibmplexserif_regular"
+                                android:text="BASS BOOST"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <SeekBar
+                                    android:id="@+id/bassboostSeekbar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="@dimen/_7sdp"
+                                    android:layout_toLeftOf="@+id/tvBoostBass"
+                                    android:maxHeight="5dip"
+                                    android:minHeight="5dip"
+                                    android:progressDrawable="@drawable/sb_progress_drawable"
+                                    android:progressTint="#6C5ECF"
+                                    android:thumb="@drawable/ic_seek_thumb" />
+
+                                <TextView
+                                    android:id="@+id/tvBoostBass"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginHorizontal="@dimen/_7sdp"
+                                    android:fontFamily="@font/segoeui"
+                                    android:text="0 %"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_14sdp" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginHorizontal="@dimen/_7sdp"
+                                android:fontFamily="@font/ibmplexserif_regular"
+                                android:text="VIRTUALIZER"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <SeekBar
+                                    android:id="@+id/virtulizerSeekbar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="@dimen/_7sdp"
+                                    android:layout_toLeftOf="@+id/tvVirtulizer"
+                                    android:maxHeight="5dip"
+                                    android:minHeight="5dip"
+                                    android:progressDrawable="@drawable/sb_progress_drawable"
+                                    android:progressTint="#6C5ECF"
+                                    android:thumb="@drawable/ic_seek_thumb" />
+
+                                <TextView
+                                    android:id="@+id/tvVirtulizer"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginHorizontal="@dimen/_7sdp"
+                                    android:fontFamily="@font/segoeui"
+                                    android:text="0 %"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_14sdp" />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+                <FrameLayout
+                    android:id="@+id/mBlankRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/rlTop1"
+                    android:layout_alignBottom="@+id/scrollable"
+                    android:alpha="0.7"
+                    android:background="#000000"
+                    android:clickable="true"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

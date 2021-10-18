@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">VideoPlayer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="rename">Rename</string>
+    <string name="select_all">Select all</string>
+    <string name="delete">Delete</string>
+    <string name="properties">Properties</string>
+    <string name="location">Location :</string>
+    <string name="date">Date :</string>
+    <string name="total_size">Total Size :</string>
+    <string name="share">Share</string>
+    <string name="format">Format :</string>
+    <string name="resolution">Resolution :</string>
+    <string name="length">Length</string>
+    <string name="remove">Remove</string>
+    <string name="equalizer">Equalizer</string>
+    <string name="custom">Custom</string>
+    <string name="vw_rationale_storage" translatable="false">Need Reading Storage Permission for Picking Files</string>
+</resources>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_65sdp"
+        android:background="@color/background_color">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgThumb"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_my_favourite"
+            app:shapeAppearance="@style/circleImageView" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_toLeftOf="@+id/imgMore"
+            android:layout_toRightOf="@+id/imgThumb"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPlaylistName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:fontFamily="@font/segoeui"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="My Favourite"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/tvVidCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:fontFamily="@font/segoeui"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="20 Videos"
+                android:textColor="@color/in_active_text_color"
+                android:textSize="@dimen/_11sdp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgMore"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_3sdp"
+            android:src="@drawable/ic_more_list" />
+
+        <ImageView
+            android:id="@+id/imgSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:src="@drawable/checked_unchecked"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</layout>

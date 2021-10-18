@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onClick"
+            type="snackvideo.vidstatus.mojstatus.funnyvideo.videoplayer.activies.PlaylistActivity.MyClickHandlers" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color"
+        tools:context=".activies.PlaylistActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".fragments.VideosFragment">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="@color/background_color"
+                    app:cardElevation="@dimen/_7sdp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imgBack"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center|left"
+                            android:layout_marginLeft="@dimen/_12sdp"
+                            android:src="@drawable/ic_close_back"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/tvTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/_13sdp"
+                            android:layout_toRightOf="@+id/imgBack"
+                            android:fontFamily="@font/ibmplexserif_regular"
+                            android:gravity="center"
+                            android:text="Folders"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15sdp" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/imgSearch"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center|right"
+                        android:layout_marginEnd="@dimen/_17sdp"
+                        android:layout_marginRight="@dimen/_17sdp"
+                        android:src="@drawable/ic_search"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/imgMore"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center|right"
+                        android:layout_marginEnd="@dimen/_17sdp"
+                        android:layout_marginRight="@dimen/_17sdp"
+                        android:onClick="@{onClick::onMoreBtnClicked}"
+                        android:src="@drawable/ic_more"
+                        android:visibility="gone" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvFolderSelect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cvTop"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/background_color1"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardElevation="@dimen/_8sdp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_15sdp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llSelectAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/_35sdp"
+                            android:onClick="@{onClick::onSelectAll}"
+                            android:paddingVertical="@dimen/_7sdp">
+
+                            <ImageView
+                                android:id="@+id/imgSelect"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/select_deselect_all" />
+
+                            <TextView
+                                android:id="@+id/tvSelectAll"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:fontFamily="@font/segoeui"
+                                android:gravity="center"
+                                android:text="@string/select_all"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_13sdp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llRename"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/_35sdp"
+                            android:onClick="@{onClick::onRenameFolder}"
+                            android:paddingVertical="@dimen/_7sdp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_remove" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:fontFamily="@font/segoeui"
+                                android:gravity="center"
+                                android:text="@string/remove"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_13sdp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llProperties"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/_35sdp"
+                            android:onClick="@{onClick::onPropertiesClick}"
+                            android:paddingVertical="@dimen/_7sdp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_properties" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:fontFamily="@font/segoeui"
+                                android:gravity="center"
+                                android:text="@string/properties"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_13sdp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:id="@+id/rlSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_below="@+id/cvTop"
+                    android:layout_centerInParent="true"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/chat_box"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/searchFile"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginRight="7dp"
+                        android:gravity="center"
+                        android:visibility="visible"
+                        app:closeIcon="@drawable/ic_close_white_24dp"
+                        app:iconifiedByDefault="false"
+                        app:queryBackground="@android:color/transparent"
+                        app:queryHint="Search"
+                        app:searchHintIcon="@android:drawable/ic_menu_search"
+                        app:showDividers="none"
+                        app:theme="@style/AppSearchView" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layoutMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlSearch"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/rlSecond"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:paddingVertical="@dimen/_5sdp">
+
+                        <ImageView
+                            android:id="@+id/imgPlay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_play_text" />
+
+                        <TextView
+                            android:id="@+id/tvVideoCounts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:paddingTop="@dimen/_3sdp"
+                            android:text="3 videos"
+                            android:textColor="@color/in_active_text_color"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <ImageView
+                            android:id="@+id/imgAddVideo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:onClick="@{onClick::addVideoToList}"
+                            android:src="@drawable/ic_add" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvTitleVideo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlSecond"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/ibmplexserif_regular"
+                        android:text="Videos"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <!-- TODO: Update blank fragment layout -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvAllVideos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvTitleVideo"
+                        android:layout_marginHorizontal="@dimen/_7sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/list_all_videos" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlNoData"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/background_color"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_no_data" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlLoading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/avLoader"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    app:indicatorName="BallScaleMultipleIndicator" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llMorePopup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/up_curve"
+            android:orientation="vertical"
+            app:behavior_hideable="true"
+            app:behavior_peekHeight="0dp"
+            app:elevation="@dimen/_7sdp"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+            <TextView
+                android:id="@+id/tvVidName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/ibmplexserif_regular"
+                android:text="VID_20200_18130.mp4"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="#FEFEFE" />
+
+            <TextView
+                android:id="@+id/tvRemove"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:drawableLeft="@drawable/ic_remove"
+                android:drawablePadding="@dimen/_17sdp"
+                android:fontFamily="@font/segoeui"
+                android:gravity="center_vertical"
+                android:onClick="@{onClick::onRemoveFileClick}"
+                android:paddingLeft="@dimen/_15sdp"
+                android:text="@string/remove"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:id="@+id/tvShare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:drawableLeft="@drawable/ic_share"
+                android:drawablePadding="@dimen/_17sdp"
+                android:fontFamily="@font/segoeui"
+                android:gravity="center_vertical"
+                android:onClick="@{onClick::shareFileClick}"
+                android:paddingLeft="@dimen/_15sdp"
+                android:text="@string/share"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:id="@+id/tvProperties"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:drawableLeft="@drawable/ic_properties"
+                android:drawablePadding="@dimen/_17sdp"
+                android:fontFamily="@font/segoeui"
+                android:gravity="center_vertical"
+                android:onClick="@{onClick::propertiesClick}"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_7sdp"
+                android:text="@string/properties"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp" />
+
+        </LinearLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_65sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@color/background_color">
+
+        <RelativeLayout
+            android:id="@+id/rlLeft"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgThumb"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_65sdp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:shapeAppearance="@style/circleImageView" />
+
+            <TextView
+                android:id="@+id/tvVidTime"
+                android:layout_width="@dimen/_56sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/ic_right_btn"
+                android:fontFamily="@font/ibmplexserif_regular"
+                android:gravity="center"
+                android:maxLines="2"
+                android:paddingHorizontal="@dimen/_7sdp"
+                android:paddingVertical="@dimen/_3sdp"
+                android:text="02:10:00"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9sdp" />
+
+            <ImageView
+                android:id="@+id/imgVidIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="@dimen/_minus1sdp"
+                android:src="@drawable/ic_right_button" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_toLeftOf="@+id/imgMore"
+            android:layout_toRightOf="@+id/rlLeft"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvVidName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:fontFamily="@font/segoeui"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="VID_20200 _18130.mp4"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/tvSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:fontFamily="@font/segoeui"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="64.4 Mb"
+                android:textColor="@color/in_active_text_color"
+                android:textSize="@dimen/_11sdp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgMore"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_3sdp"
+            android:src="@drawable/ic_more_list" />
+
+        <ImageView
+            android:id="@+id/imgSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:src="@drawable/checked_unchecked"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</layout>

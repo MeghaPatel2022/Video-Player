@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_folders"
+        android:icon="@drawable/ic_folders"
+        android:title="Folders" />
+    <item
+        android:id="@+id/navigation_videos"
+        android:icon="@drawable/ic_videoes"
+        android:title="Videos" />
+    <item
+        android:id="@+id/navigation_history"
+        android:icon="@drawable/ic_history"
+        android:title="History" />
+    <item
+        android:id="@+id/navigation_playlist"
+        android:icon="@drawable/ic_playlist"
+        android:title="Playlist" />
+</menu>

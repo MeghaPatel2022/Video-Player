@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onClick"
+            type="snackvideo.vidstatus.mojstatus.funnyvideo.videoplayer.activies.MainActivity.MyClickHandlers" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/layoutMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background_color"
+                tools:context=".activies.MainActivity">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_55sdp"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="@color/background_color"
+                    app:cardElevation="@dimen/_7sdp">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_17sdp"
+                        android:layout_marginLeft="@dimen/_17sdp"
+                        android:fontFamily="@font/ibmplexserif_regular"
+                        android:gravity="center"
+                        android:text="Folders"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_17sdp" />
+
+                    <ImageView
+                        android:id="@+id/imgSearch"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center|right"
+                        android:layout_marginEnd="@dimen/_17sdp"
+                        android:layout_marginRight="@dimen/_17sdp"
+                        android:src="@drawable/ic_search"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/imgMore"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center|right"
+                        android:layout_marginEnd="@dimen/_17sdp"
+                        android:layout_marginRight="@dimen/_17sdp"
+                        android:onClick="@{onClick::onMoreBtnClicked}"
+                        android:src="@drawable/ic_more"
+                        android:visibility="gone" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvSecondTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_55sdp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/background_color"
+                    app:cardElevation="@dimen/_7sdp">
+
+                    <TextView
+                        android:id="@+id/tvTitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_17sdp"
+                        android:layout_marginLeft="@dimen/_17sdp"
+                        android:fontFamily="@font/ibmplexserif_regular"
+                        android:gravity="center"
+                        android:text="Folders"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_17sdp" />
+
+                    <ImageView
+                        android:id="@+id/imgDone"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center|right"
+                        android:layout_marginEnd="@dimen/_17sdp"
+                        android:layout_marginRight="@dimen/_17sdp"
+                        android:onClick="@{onClick::onDoneClick}"
+                        android:src="@drawable/ic_done"
+                        android:visibility="visible" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvDeleteHis"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_55sdp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/background_color"
+                    app:cardElevation="@dimen/_7sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tvDelCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_17sdp"
+                            android:layout_marginLeft="@dimen/_17sdp"
+                            android:fontFamily="@font/ibmplexserif_regular"
+                            android:gravity="center"
+                            android:text="Folders"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_17sdp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/_15sdp">
+
+                            <TextView
+                                android:id="@+id/tvDelCancel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/without_color_bg"
+                                android:fontFamily="@font/segoeui"
+                                android:gravity="center"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_3sdp"
+                                android:paddingBottom="@dimen/_4sdp"
+                                android:text="Cancel"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <TextView
+                                android:id="@+id/tvDelOk"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:background="@drawable/without_color_bg"
+                                android:backgroundTint="@color/purple_500"
+                                android:fontFamily="@font/segoeui"
+                                android:gravity="center"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_3sdp"
+                                android:paddingBottom="@dimen/_4sdp"
+                                android:text="Delete"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvFolderSelect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cvTop"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/background_color1"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardElevation="@dimen/_8sdp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_15sdp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llSelectAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/_35sdp"
+                            android:onClick="@{onClick::onSelectAll}"
+                            android:paddingVertical="@dimen/_7sdp">
+
+                            <ImageView
+                                android:id="@+id/imgSelect"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/select_deselect_all" />
+
+                            <TextView
+                                android:id="@+id/tvSelectAll"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:fontFamily="@font/segoeui"
+                                android:gravity="center"
+                                android:text="@string/select_all"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_13sdp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llRename"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/_35sdp"
+                            android:onClick="@{onClick::onRenameFolder}"
+                            android:paddingVertical="@dimen/_7sdp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_rename" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:fontFamily="@font/segoeui"
+                                android:gravity="center"
+                                android:text="@string/rename"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_13sdp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llDelete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/_35sdp"
+                            android:onClick="@{onClick::onDeleteBtnClick}"
+                            android:paddingVertical="@dimen/_7sdp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_delete" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:fontFamily="@font/segoeui"
+                                android:gravity="center"
+                                android:text="@string/delete"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_13sdp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llProperties"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/_35sdp"
+                            android:onClick="@{onClick::onPropertiesClick}"
+                            android:paddingVertical="@dimen/_7sdp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_properties" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:fontFamily="@font/segoeui"
+                                android:gravity="center"
+                                android:text="@string/properties"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_13sdp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:id="@+id/rlSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_below="@+id/cvTop"
+                    android:layout_centerInParent="true"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/chat_box"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/searchFile"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginRight="7dp"
+                        android:gravity="center"
+                        android:visibility="visible"
+                        app:closeIcon="@drawable/ic_close_white_24dp"
+                        app:iconifiedByDefault="false"
+                        app:queryBackground="@android:color/transparent"
+                        app:queryHint="Search"
+                        app:searchHintIcon="@android:drawable/ic_menu_search"
+                        app:showDividers="none"
+                        app:theme="@style/AppSearchView" />
+
+                </RelativeLayout>
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/bottom_navigation"
+                    android:layout_below="@+id/rlSearch"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:background="@color/background_color" />
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/bottom_navigation"
+                    style="@style/NavigationView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_65sdp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/up_curve"
+                    android:fitsSystemWindows="true"
+                    app:elevation="@dimen/_5sdp"
+                    app:itemIconTint="@drawable/tab_icon_color"
+                    app:itemTextColor="@drawable/tab_txt_color"
+                    app:labelVisibilityMode="labeled"
+                    app:menu="@menu/bottom_navigation_menu" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llMorePopup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/up_curve"
+                android:orientation="vertical"
+                app:behavior_hideable="true"
+                app:behavior_peekHeight="0dp"
+                app:elevation="@dimen/_7sdp"
+                app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+                <TextView
+                    android:id="@+id/tvVidName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/ibmplexserif_regular"
+                    android:text="VID_20200_18130.mp4"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="#FEFEFE" />
+
+                <TextView
+                    android:id="@+id/tvRename"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:drawableLeft="@drawable/ic_rename"
+                    android:drawablePadding="@dimen/_17sdp"
+                    android:fontFamily="@font/segoeui"
+                    android:gravity="center_vertical"
+                    android:onClick="@{onClick::onRenameFileClick}"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:text="@string/rename"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/tvShare"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:drawableLeft="@drawable/ic_share"
+                    android:drawablePadding="@dimen/_17sdp"
+                    android:fontFamily="@font/segoeui"
+                    android:gravity="center_vertical"
+                    android:onClick="@{onClick::shareFileClick}"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:text="@string/share"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/tvProperties"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:drawableLeft="@drawable/ic_properties"
+                    android:drawablePadding="@dimen/_17sdp"
+                    android:fontFamily="@font/segoeui"
+                    android:gravity="center_vertical"
+                    android:onClick="@{onClick::propertiesClick}"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:text="@string/properties"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/tvAddToPlaylist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:drawableLeft="@drawable/ic_playlist_add"
+                    android:drawablePadding="@dimen/_17sdp"
+                    android:fontFamily="@font/segoeui"
+                    android:gravity="center_vertical"
+                    android:onClick="@{onClick::addToPlaylist}"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:text="Add To Playlist"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/tvDelete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:drawableLeft="@drawable/ic_delete"
+                    android:drawablePadding="@dimen/_17sdp"
+                    android:fontFamily="@font/segoeui"
+                    android:gravity="center_vertical"
+                    android:onClick="@{onClick::onDeleteLine}"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:text="@string/delete"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11sdp" />
+
+            </LinearLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlNoData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_color"
+            android:visibility="gone">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_55sdp"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/background_color"
+                app:cardElevation="@dimen/_7sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_17sdp"
+                    android:layout_marginLeft="@dimen/_17sdp"
+                    android:fontFamily="@font/ibmplexserif_regular"
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_17sdp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_no_data" />
+
+        </RelativeLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

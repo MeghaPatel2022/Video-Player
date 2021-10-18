@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="@dimen/_145sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_margin="@dimen/_8sdp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgVideoThumb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:shapeAppearance="@style/circleImageView" />
+
+        <TextView
+            android:id="@+id/tvVidName"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/ic_recent_title_back"
+            android:fontFamily="@font/ibmplexserif_regular"
+            android:gravity="center"
+            android:maxLines="2"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_3sdp"
+            android:text="VID_20200_18130.mp4"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/imgVidIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_recent_video_icon" />
+
+    </RelativeLayout>
+</layout>
